@@ -8,7 +8,7 @@ body {
 }
 
 body {
-    background-image: url("ZPictures/sampleee.jpg");
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,31 +125,32 @@ header a {
 /* Overlay */
 .overlay {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 50%;
-    /* move to horizontal center */
-    transform: translateX(-50%);
-    /* adjust to truly center */
-    width: auto;
-    /* shrink to fit content */
-    max-width: 90%;
-    /* prevent overflow */
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
+    transform: translate(-50%, -50%);
+    width: 90%;
     text-align: center;
-    border-radius: 10px;
+    color: white;
     opacity: 0;
     transition: 0.3s ease;
-    box-sizing: border-box;
 }
 
 .card.active .overlay {
     opacity: 1;
 }
 
+.overlay-title {
+    font-size: 2.5rem;
+    /* big bold name */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.overlay-desc {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
 /* Features */
 .features {
     margin: 0 50px;
