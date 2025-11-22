@@ -28,17 +28,6 @@ function toggleAndNavigate(card, url) {
     }, 300);
 }
 
-function openViewer(card) {
-    const viewer = document.getElementById("viewer");
-    const img = card.querySelector("img");
-    const overlay = card.querySelector(".overlay");
-
-    document.getElementById("viewer-img").src = img.src;
-    document.getElementById("viewer-desc").innerHTML = overlay.innerHTML;
-
-    viewer.style.display = "flex";
-    setTimeout(() => viewer.classList.add("show"), 10);
-}
 
 function closeViewer() {
     const viewer = document.getElementById("viewer");
@@ -46,4 +35,8 @@ function closeViewer() {
     setTimeout(() => {
         viewer.style.display = "none";
     }, 400);
+}
+function openViewer(memberId) {
+    // Scroll smoothly to the member section
+    document.getElementById(memberId).scrollIntoView({ behavior: "smooth" });
 }
